@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01.html</title>
+    <!-- ---------------------------------- -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <!-- ---------------------------------- -->
+    <script>
+        window.onload=function(){
+            //id가 a인 div 요소를 찾아서 그 안에 <h1>Hello jQuery</h1>를 넣으세요
+            let objA=document.getElementById('a');
+            //alert(objA);
+            objA.innerHTML="<h1 style='color:blue'>Hello jQuery</h1>";
+
+        }
+            //id가  b인 div 요소를 찾아서 그 안에 <h1>Hello jQuery</h1>를 넣으세요
+            //jQuery()함수
+            jQuery(document).ready(function(){
+                let objB=jQuery('#b');
+                //alert(objB);
+                objB.html("<h1>HI jQuery</h1>").css('color','tomato');
+            })
+
+            //jQuery() ==> 축약하여 사용할 수 있다. $()
+            //${} ==> el표현식
+            //#{} ==> mybatis 표현식
+            //$() ==> jQuery()함수를 축약한 표현식
+
+            $(document).ready(()=>{
+                $('#c').html("<h1>Welcome to jQuery</h1>")
+                        .css('color','green')
+                        .css('background-color','#abc')
+                        .css('border','3px dashed purple')
+                        .css('padding','1em')
+            })
+            $(function(){
+                $('.d').html("<h3>Welcome to jQuery</h3>")
+                        .css('width','100px')
+                        .css('height','100px')
+                        .css('margin-top','1em')
+                        .css('background-color','#afc')
+                        .css('border','3px solid orange')
+                        .css('padding','1em')
+            })
+                        
+    </script>
+</head>
+<body>
+    <h1>jQuery - 자바스크립트 라이브러리</h1>
+    <h2>jQuery 라이브러리 참조 방법</h2>
+    <h3>[1] 다운로드 받아 설치하는 방법 http://jQuery.com</h3>
+    <h3>[2] CDN방식 (Content Delivery Network) 으로 참조</h3>
+
+    <hr color="red">
+
+    <div id="a">1</div>
+    <div id="b">2</div>
+    <div id="c">3</div>
+    <div class="d">4</div>
+    
+    
+</body>
+</html>

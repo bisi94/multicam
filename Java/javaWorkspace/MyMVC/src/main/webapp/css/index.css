@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/*index.css*/
+body *{
+	margin:0;
+	padding: 0;
+}
+
+ul,li{
+	list-style-type: none;
+}
+a:link{
+	text-decoration: none;
+}
+div.wrap{
+	width:100%;
+	margin:auto;
+}
+.container{
+	width: 1024px;
+	margin: 0 auto;
+	overflow: auto;
+	/*border:1px solid red;*/
+	padding: 2.5em;
+	text-align: center;
+}
+.topMenu{
+	background-color: lightblue;
+	height:80px;
+	line-height: 80px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+}	
+.bottom{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #ddd;
+	text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	
+}
+table{
+	width: 90%;
+	margin: auto;
+	border-collapse: collapse;
+}
+#userTable td{
+	text-align: left;
+	padding: 7px;
+}
+input, select, textarea{
+	padding: 5px;
+	
+}
+#userTable .addr{
+	width:70%;
+	margin: 4px 0;
+}
+.btn{
+	padding: 5px;
+	width: 180px;
+	background-color: #0066ff;
+	color:#fff;
+	border:#ddd;
+}
+.m1{
+	background-color: powderblue;
+}
+th{padding: 7px;}
+.m2{
+	background-color: lightseagreen;
+}
+.m3{
+	background-color: #cc9900;
+}
+/*활동회원 0*/
+.mstate0{
+	color:black;
+}
+.mstate-1{
+	color:tomato;
+}
+.mstate-2{
+	color:grey;
+}
+.mstate9{
+	color:blue;
+}
+
+
+
+
+
+
+
+

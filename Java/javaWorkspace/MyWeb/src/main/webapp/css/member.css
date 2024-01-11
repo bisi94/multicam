@@ -1,0 +1,72 @@
+@charset "UTF-8";
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: darkslategray;
+}
+#wrap{
+	width:80%;
+	margin:auto;
+	max-width: 1024px;
+	/*border: 1px solid red;*/
+	padding: 1em;
+}
+#wrap table{
+	width: 100%;
+	margin:2em auto; /*상하:2em 좌우:auto*/
+	border-collapse: collapse;
+}
+#wrap th,td{
+	padding: 7px;
+}
+#wrap th{
+	width: 20%;
+	background-color: lightskyblue;
+	text-align: left;
+	padding-left: 2em;
+}
+#wrap #title{
+	text-align: center;
+}
+#wrap input{
+	padding: 5px;
+	width: 70%;	
+}
+#wrap button{
+	padding: 5px;
+	border: 1px solid silver;
+	width: 200px;
+}
+#wrap button.btn{
+	width: 80px;
+	padding: 5px;
+	border: 1px solid silver;
+}
+
+.m1{
+	background-color: honeydew;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

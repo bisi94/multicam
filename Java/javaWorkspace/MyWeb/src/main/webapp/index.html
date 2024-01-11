@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Index PAGE</title>
+	</head>
+	
+	<body>
+		<h1>Hello MyWeb~</h1>
+		<h2>안녕하세요?</h2>
+		<hr>
+		<h2>GET방식의 요청</h2>
+		<ol>
+			<li>브라우저에 URL을 직접 요청을 입력하는 경우</li>
+			<li>a태그에 링크를 걸어 요청하는 경우</li>
+			<li>form태그에 method를 get으로 설정하는 경우</li>
+			<li>자바스크립트 location.href="url" 입력하는 경우</li>
+			
+		</ol>
+		<a href="GetServlet?userid=hong&userpw=abc"><h3>get방식으로 요청보내기</h3></a>
+		<!-- ?파라미터명1=값1 & 파라미터명2=값2-->
+		
+		<form action="GetServlet" method="get">
+			아이디:<input type="text" name="userid"><br><br>
+			비밀번호:<input type="password" name="userpw"><br><br>
+			<button>회원가입</button>
+		</form>
+		<hr color="green">
+		<a href="member/join.html">회원가입</a><br><br>
+		<a href="MemberList">회원목록</a><br><br>
+		
+		<button onclick="location.href='GetServlet?userid=King&userpw=Queen'">GetServlet에 요청보내기2</button>
+		<a href="#" onclick="location.href='GetServlet?userid=Peter&userpw=111'">GetServlet에 요청보내기2</a>
+		
+		<hr>
+		<h2>POST방식의 요청</h2>
+		<ol>
+			<li>form태그에 method를 post로 설정하는 경우</li>
+			<li>자바스크립트 form객체의 method속성을 post로 설정하는 경우</li>
+		</ol>
+		<!-- post방식을 사용해야 할 때
+			[1] 비밀번호, 개인정보 등을 포함하고 있을 경우
+			[2] 첨부파일을 서버에 업로드 해야 하는 경우
+			=> 파일 업로드 시에는 post방식과 더불어서 enctype="multipart/form-data" 로 주어야 한다
+		-->
+		<form action="PostServlet" method="post">
+			아이디:<input type="text" name="userid" required><br><br>
+			비밀번호:<input type="password" name="userpw"><br><br>
+			<button>회원가입</button>
+		</form>
+		
+		<br><br>
+		
+		<form name="frm">
+			아이디:<input type="text" name="userid"><br><br>
+			비밀번호:<input type="password" name="userpw"><br><br>
+			<button type="button" onclick="check_send()">회원가입</button>
+		</form>
+		
+		<script type="text/javascript">
+			function check_send(){
+				//유효성 체크 =>client쪽에서 체크
+				if(frm.userid.value==''){
+					alert('아이디를 입력하세요');
+					frm.userid.focus();
+					return;
+				}
+				if(frm.userpw.value==''){
+					alert('비밀번호를 입력하세요');
+					frm.userpw.focus();
+					return;
+				}
+				
+				frm.action="PostServlet"; //서버 페이지 기술
+				frm.method="post"; //메서드 지정
+				frm.submit(); //전송
+			}//check_send()-----------------------
+		</script>
+		
+		
+		
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

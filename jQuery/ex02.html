@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02.html</title>
+<!-- jQuery CDN------------------------------------------------------------------------------ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- ---------------------------------------------------------------------------------------- -->
+
+<script>
+    $(function(){
+        //1. 기본선택자. 모든 요소 선택해서 글자색 blue
+        $("*").css('color','blue')
+
+        //2. 태그 선택자 $('태그')
+		//h1태그를 선택해서 글자색을 purple로 주세요
+        $('h1').css('color','purple')
+		
+		//h2,h3 선택해서 배경색을 gold로 주세요
+        $('h2,h3').css('color','gold')
+        //$('h3').css('color','gold')
+		
+		//3. 아이디 선택자 $('#아이디') 
+		//아이디가 item 요소를 선택해서 테두리를 2px dashed green		
+        $('#item').css('border','2px dashed green')
+		
+		//4. 클래스 선택자 $('.클래스명')
+		//class가 target1, target2 선택해서
+		//테두리를 solid thick orange로 주고
+		//글자색은 lime으로
+		//글자 크기는 20pt로 주세요
+        $('.target1, .target2').css('border','solid thick orange')
+                                .css('color','lime')
+                                .css('font-size','20pt')
+
+        //클래스가 target2인 요소 선택해서 배경색 알아서, 서체, 'consolas', 테두리 모서리 둥글게
+        $(".target2").css({
+                'background-color':'#dac',
+                'font-family':'consolas',
+                'border-radius':'10px',
+                'padding':'5px'
+        })
+
+        $('.target1').css({
+            backgroundColor:'navy',
+            fontFamily:'Consolas',
+            borderRadius:'10px',
+            padding:'5px'
+        })
+
+    })//$(function) end---------------
+</script>
+
+</head>
+<body>
+    <h1>jQuery기본선택자, 태그, 아이디, 클래스 선택자</h1>
+    <h1>안녕하세요 jQuery1</h1>
+    <h2>안녕하세요 jQuery2</h2>
+    <h3>안녕하세요 jQuery3</h3>
+
+    <p id="item">ID Selector: item</p>
+    <p class="target1">Class Selector: target1</p>
+    <p class="target2">Class Selector: target2</p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>이미지 실습</h1>
+    <h2>b.png파일을 보여주세요. 이미지 대체 설명도 넣으세요 (상대경로) </h2>
+    <img src="../b.png" alt="되겠냐?" width="250">
+
+    <hr color="blue">
+
+    <h2>c.png파일을 보여주세요. 이미지 대체 설명도 넣으세요 (상대,절대경로)</h2>
+    <img src="../img/c.png" alt="zzzzzzzzzzzzzzzzzzzzzz">
+    <img src="http://127.0.0.1:5500/img/c.png" alt="실패ㅋ" >
+    <img src="/img/c.png" alt="gzzgzgzgz">
+    <!-- 경로의 제일 앞쪽에 /가 들어가면 무조건 절대경로이며 
+        기준디렉토리는 파일을 둔 위치임 -->
+
+        <hr color="red"> <br>
+
+
+        <figure>
+            <img src="https://ssl.pstatic.net/melona/libs/1461/1461313/cf7b8c7aa5857c8909f8_20230818134121893.jpg"
+            width="800">
+            <figcaption>배너광고</figcaption>
+            <!-- figcaption 이미지에 대한 캡션(주석넣기) -->
+        </figure>
+
+        <hr color="red">
+
+        <a href="/page04_link.html">page04_link.html로 이동하기1</a> <br>
+        <!-- 절대경로 -->
+
+        <a href="../page04_link.html">page04_link.html로 이동하기2</a>
+        <!-- 상대경로 -->
+
+</body>
+</html>

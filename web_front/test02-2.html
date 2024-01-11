@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test230822-2</title>
+    <style>
+        body{
+            font-size: 0.8em;
+        }
+        .blue{
+            background-color: skyblue;
+            font-weight: bold;
+        }
+        .yellow{
+            background-color: bisque;
+            text-align: right;
+            width: 130px;            
+        }
+        .small{
+            font-size: 0.6em;
+            color:blue;
+        }
+        #phone{
+            font-size: 0.6em;
+        }
+        .long{
+            width: 300px;
+        }
+        .high{
+            height:100px;
+            width: 250px;
+        }
+        #p1{
+            margin-left: 200px;
+        }
+        .ok{
+            width:80px;
+        }
+    </style>
+</head>
+<body>
+    <form action="welcome.jsp">
+        <table>
+            <tr class="blue">
+                <td colspan="5">☞ 아이디(ID)정보</td>            
+            </tr>
+            <tr>
+                <td rowspan="2" class="yellow">*아이디</td>
+                <td colspan="4"><input type="text"> <button>중복검사</button></td>            
+            </tr>
+            <tr>            
+                <td colspan="4" class="small">(4~12자 영자/숫자 가능. 한글,특수문자ID는 사용할 수 없습니다.)</td>            
+            </tr>
+            <tr>
+                <td class="yellow">*비밀번호</td>
+                <td colspan="3"><input type="password"></td>
+                <td class="small">(4~8자 이내로 만들어 주세요)</td>
+            </tr>
+            <tr>
+                <td class="yellow">*비밀번호 확인</td>
+                <td  colspan="3"><input type="password"></td>
+                <td class="small">(위 번호와 같이 입력해 주세요)</td>            
+            </tr>
+            <tr>
+                <td colspan="5" class="blue">☞ 개인정보</td>        
+            </tr>        
+            <tr>
+                <td class="yellow">*이름(한글)</td>
+                <td colspan="3"><input type="text"></td>
+                <td class="small">(예: 박정현)</td>        
+            </tr>
+            <tr>
+                <td class="yellow">생년월일</td>
+                <td colspan="4"><input type="date"> <input type="radio"></td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="yellow">*주소</td>
+                <td colspan="4"><input type="text"> <button>우편번호 찾기</button></td>
+            </tr>
+            <tr>            
+                <td colspan="4" class="long"><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="yellow">*전화번호</td>
+                <td id="phone">핸드폰 <input type="text"></td>
+                <td colspan="3"> <input type="radio">SKT <input type="radio">KT <input type="radio">LGT</td>        
+            </tr>
+            <tr>
+                <td class="yellow">이메일</td>
+                <td colspan="4"><input type="text"></td>          
+            </tr>
+            <tr>
+                <td class="yellow" class="high">가입인사</td>
+                <td colspan="4"><input type="text" class="high"></td>          
+            </tr>
+        </table>
+        <p id="p1"><button class="ok">확인</button> <button class="ok">다시입력</button></p>
+    </form>
+</body>
+</html>

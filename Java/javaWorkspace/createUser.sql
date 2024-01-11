@@ -1,0 +1,7 @@
+CREATE USER scott
+    IDENTIFIED BY tiger;
+GRANT CONNECT, RESOURCE, DBA TO scott;
+
+CREATE USER multishop
+    IDENTIFIED BY tiger;
+GRANT CONNECT, RESOURCE, DBA TO multishop;

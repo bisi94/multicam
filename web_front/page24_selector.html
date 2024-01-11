@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page24_selector.html</title>
+
+    <style>
+        /* h1과 p가 같은 라인에 있다면 h1은 첫번째 자식으로 인식 
+            자식넘버링과 태그는 별개*/
+        p:nth-child(1){
+            background-color: pink;
+            border: dotted;
+        }
+        p:nth-child(2){
+            background-color: lightcoral;
+            font-size: 100%;
+        }
+        p:nth-child(3){
+            background-color: violet;
+            font-size: 1.5em;
+        }
+        p:nth-child(4){
+            background-color: lightsalmon;
+            font-size: 200%;
+        }
+    </style>
+</head>
+<body>
+    <h1>nth-child() 활용 - 자식을 선택할 때 사용</h1>
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+</body>
+</html>

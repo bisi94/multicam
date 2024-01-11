@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board.model.BoardMapper">
+	<select id="test" resultType="_int">
+		select count(*) from tab
+	</select>
+	
+	<!-- selectKey를 이용하면 BoardVO객체의 setNO(시퀀스증가)를 자동으로 해준다 -->
+	<insert id="insertBoard" parameterType="Board">
+		<selectKey keyProperty="no" resultType="_int" order="BEFORE">
+			select board_seq.nextval from dual
+		</selectKey>
+		INSERT INTO board
+		VALUES(#{no},#{name},#{pwd},#{subject:VARCHAR},	#{content:VARCHAR}
+		,systimestamp,0,#{filename:VARCHAR},#{filesize:NUMERIC})
+		
+	</insert>
+	
+	<insert id="insertBoard_old" parameterType="board.model.BoardVO">
+		INSERT INTO board
+		VALUES(board_seq.nextval,#{name},#{pwd},#{subject:VARCHAR},	#{content:VARCHAR}
+		,systimestamp,0,#{filename:VARCHAR},#{filesize:NUMERIC})
+		
+		<!-- #{name} => vo객체의 getName()를 호출해서 반환해주는 값을 넣어주는 기능
+		null값이 들어올 수 있는 컬럼의 경우는 jdbcType을 기술해야 한다 -->
+		
+	</insert>
+	
+	<select id="listBoard" resultType="Board" parameterType="map">
+		select * from (
+		select rownum rn, a.* from
+		(select * from board 
+		
+		<include refid="findWhere" />
+		
+		order by no desc) a
+		) where rn between #{start} and #{end}
+	</select>
+	
+
+	<select id="listBoard_old" resultType="Board">
+		select * from board order by no desc
+	</select>
+	
+	<!-- 총 게시글 수 -->
+	<select id="getTotalCount" resultType="_int">
+		select count(no) from board
+	</select>
+	
+	<!-- 조각sql문 -->
+	<sql id="findWhere">
+		<if test="findType!=null and findKeyword!=''">
+			<where>
+				<if test="findType==1"><!-- 제목 -->
+					subject like '%'|| #{findKeyword} ||'%'
+				</if>
+				<if test="findType==2"><!-- 작성자 -->
+					name like '%'|| #{findKeyword} ||'%'
+				</if>
+				<if test="findType==3"><!-- 글내용 -->
+					content like '%'|| #{findKeyword} ||'%'
+				</if>
+			</where>
+		</if>
+		
+	</sql>
+	
+	<!-- 검색한 게시글 수 -->
+	<select id="getFindTotalCount" resultType="_int" parameterType="map">
+		select count(no) from board
+		<include refid="findWhere" />
+	</select>
+	
+	<select id="getBoard" resultType="Board" parameterType="_int">
+		select * from board where no=#{no}
+	</select>
+	<!-- 조회수 증가 -->
+	<update id="updateReadnum" parameterType="_int">
+		update board set readnum=readnum+1 where no=#{value}
+	</update>
+	<delete id="deleteBoard" parameterType="_int">
+		delete from board where no=#{value}
+	</delete>
+	<update id="updateBoard" parameterType="Board">
+		update board
+		<set>
+			name=#{name}, pwd=#{pwd}, 
+			subject=#{subject:VARCHAR}, content=#{content:VARCHAR}
+			<if test="filename != null and filename != ''">
+			,filename=#{filename}, filesize=#{filesize}
+			</if>
+		</set>		
+		<where>
+			no=#{no}
+		</where>
+		
+	</update>
+	
+</mapper>
+
+
+
+
+
+

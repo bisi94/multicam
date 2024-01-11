@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>join.html</title>
+<!-- 외부 css파일 참조===================================================-->
+<link rel="stylesheet" type="text/css" href="../css/member.css">
+<!--================================================================-->
+
+<script type="text/javascript">
+	function check(){
+		if(!mf.name.value){
+			alert('이름을 입력하세요');
+			mf.name.focus();
+			return;
+		}
+		//아이디 체크
+		if(!mf.userid.value){
+			alert('아이디를 입력하세요');
+			mf.userid.focus();
+			return;
+		}
+		//비밀번호 체크
+		if(!mf.userpw.value){
+			alert('비밀번호를 입력하세요');
+			mf.userpw.focus();
+			return;
+		}
+		//비밀번호와 확인값 비교 후 체크	
+		if(mf.userpw.value!=mf.userpw2.value){
+			alert('비밀번호와 일치하지 않습니다');
+			mf.userpw2.focus();
+			return;
+		}
+		
+		mf.submit();//서버에 전송
+	}
+	
+</script>
+
+</head>
+<body>
+	<div id="wrap">
+		<form name="mf" action="../Signup" method="post">
+			<table border="1">
+				<tr>
+					<th colspan="2" id="title" style="text-align: center;">
+						<h2>Signup</h2>
+					</th>
+				</tr>
+				<tr>
+					<th>이름</th>
+					<td>
+						<input type="text" name="name">
+					</td>
+				</tr>
+				<tr>
+					<th>아이디</th>
+					<td>
+						<input type="text" name="userid">
+					</td>
+				</tr>
+				<tr>
+					<th>비밀번호</th>
+					<td>
+						<input type="password" name="userpw">
+					</td>
+				</tr>
+				<tr>
+					<th>비밀번호 확인</th>
+					<td>
+						<input type="password" name="userpw2">
+					</td>
+				</tr>
+				<tr>
+					<th>연락처</th>
+					<td>
+						<input type="text" name="tel">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<button type="button" onclick="check()">회원가입</button>
+						<button type="reset">다시쓰기</button>
+					</td>
+				</tr>
+				
+			</table>
+			
+		</form>
+		
+		<div style='text-align:center'><a href='../MemberList'>회원목록</a></div>
+		
+	</div>
+
+</body>
+</html>

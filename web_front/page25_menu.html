@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page25_menu.html</title>
+    <style>
+        ul>li{
+            list-style: none;
+            /* list-style:none 메뉴 동그라미 없애기  */
+            background-color: lavenderblush;
+            width:100px;
+            padding: 1em;
+            height: 25px;
+            float:left;
+            /* float을 해제하고자 할 때는 
+            clear:left, clear:right, clear:both */
+            margin-bottom: 1em;
+            /* border: 1px solid red; */
+            border-radius: 50px; /*상하좌우 50px*/
+            text-align: center;
+
+        }
+        a:link{
+            text-decoration: none;
+        }
+        hr{
+            clear:both; /*float속성 해제*/            
+        }
+        li:first-child{
+            background-color: yellow;
+        }
+        li:last-child{
+            background-color: orange;
+        }
+        li:nth-child(2n){
+            /* 2n : 짝수번째 */
+            background-color: orange;
+        }
+        li:nth-child(2n+1){
+            /* 2n+1 : 홀수번째 */
+            background-color: yellow;
+        }
+        div{
+            background-color: blue;
+            width:200px;
+            height:200px;
+            color:white;
+            border-radius: 10px 30px 40px 90px;
+            /*좌측상단을 시점으로 시계방향의 순서로 모깎기됨*/
+            /* 두개의 수치만 입력하면 마주보는 대각선으로 깎음*/ 
+
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="page01.html">회원가입</a></li>
+        <li><a href="page02_text.html">제품정보</a></li>
+        <li><a href="page03_img.html">게시판</a></li>
+        <li><a href="page04_link.html">장바구니</a></li>
+    </ul>
+    
+    <hr color="red" size="5">
+
+    <div>
+        div
+    </div>
+</body>
+</html>

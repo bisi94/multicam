@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오디오, 비디오</title>
+</head>
+<body>
+    <h1>오디오 재생</h1>
+    <audio src="audios/I_Have_A_Dream.mp3" controls="controls">
+    </audio>
+    <!-- 오디오는 그냥 가져다 붙였을 때 작동이 안되서 제어기를 사용해야함 
+        mp3 (크롬, 사파리)
+        ogg (크롬, 오페라, 파이어폭스)
+        wav (크롬, 오페라, 파이어폭스, 사파리)
+    -->     
+    <hr>
+    <audio controls loop="2">
+        <!-- autoplay -->
+        <source src="audios/Ob-La-Di Ob-La-Da.ogg" type="audio/ogg">
+        <source src="audios/Ob-La-Di Ob-La-Da.mp3" type="audio/mp3">
+        <source src="audios/Ob-La-Di Ob-La-Da.wav" type="audio/wav">
+        오디오가 지원되지 않는 브라우저입니다
+    </audio>
+    <hr>
+    <h1>비디오 재생</h1>
+    <video controls poster="audios/apple.jpg" width="400" autoplay muted>
+        <source src="audios/The Simpsons.mp4">
+
+    </video>
+</body>
+</html>

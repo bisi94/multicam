@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traning.html</title>
+    <style>
+        /* top 공통사항---------------------------------------- */
+        #top{
+            width: 95%;
+            height: 100px;            
+            border: 1px solid red;
+            background-color: lightgrey;
+            display: flex;
+        }
+        /* --------------------------------------------------- */
+        /* top 이미지------------------------------------------ */
+        div.top_right{
+            display: flex;
+        }
+        
+        div.top_right img{
+            width: 100px;            
+        }
+        /* --------------------------------------------------- */        
+        li.menu{            
+            list-style: none;
+            float: left;
+            letter-spacing: 3px;            
+            padding: 5px;
+            margin: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border: 1px solid red;
+            
+            display: flex;
+            flex-flow: nowrap;
+            justify-content: flex-end;
+    
+        }
+        a:link{
+            text-decoration: none;
+        }
+        a{
+            color: black;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <div id="top">
+        <div class="top_right"><img src="img/f.png" alt=""></div>
+        <div class="category">
+            <ul>
+                <li class="menu"><a href="">회원가입</a></li>
+                <li class="menu"><a href="">상품정보</a></li>
+                <li class="menu"><a href="">찾아오시는 길</a></li>
+                <li class="menu"><a href="">장바구니</a></li>
+            </ul>
+        </div>
+        
+    </div>
+</body>
+</html>

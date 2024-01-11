@@ -1,0 +1,29 @@
+<!-- src/main/resources/com/example/mapper/SampleMapper.xml -->
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mapper.SampleMapper">
+
+    <!-- SELECT 문에 대한 매핑 -->
+    <select id="selectSample" resultType="com.example.model.SampleModel">
+        SELECT * FROM sample_table
+    </select>
+
+    <!-- INSERT 문에 대한 매핑 -->
+    <insert id="insertSample" parameterType="com.example.model.SampleModel">
+        INSERT INTO sample_table (id, name) VALUES (#{id}, #{name})
+    </insert>
+
+    <!-- UPDATE 문에 대한 매핑 -->
+    <update id="updateSample" parameterType="com.example.model.SampleModel">
+        UPDATE sample_table SET name = #{name} WHERE id = #{id}
+    </update>
+
+    <!-- DELETE 문에 대한 매핑 -->
+    <delete id="deleteSample" parameterType="java.lang.Integer">
+        DELETE FROM sample_table WHERE id = #{id}
+    </delete>
+
+</mapper>

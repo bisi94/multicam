@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        table{
+            width:600px;
+            height:500px;
+            margin-left: auto;
+            margin-right:auto;
+        }
+        .first{
+            background-color: aqua;
+        }
+        .desbox{
+            background-color: yellow;
+            text-align: right;
+        }
+        .write{
+            color:blue;
+            font-size:0.7em;
+        }
+        #cellphone{
+            color:purple;
+            font-size:0.7em;
+        }
+        #intro{
+            width:300px;
+            height:50px;
+        }
+        #address2{
+            width:400px;
+        }
+        .button1{
+            width:100px;
+            display:inline-block;
+        }
+        .button{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="ex02.html">뒤로가기</a>
+    <form>
+        <table>
+            <tr class="first">
+                <td colspan="2"><b>☞아이디(ID)정보</b></td>
+            </tr>
+            <tr>
+                <td class="desbox" rowspan="2"><label for="userid">*아이디</label></td>
+                <td><input type="text" id="userid"> <button>중복검사</button></td>
+                
+            </tr>
+            <tr>
+                <td class="write">(4~12자 영어/숫자 가능. 한글,특수문자 ID는 사용할 수 없습니다.)</td>
+            </tr>
+            <tr>
+                <td class="desbox"><label for="userpw">*비밀번호</label></td>
+                <td class="write"><input type="password" id="userpw"> (4~8자 이내로 만들어 주세요)</td>
+            </tr>
+            <tr>
+                <td class="desbox"><label for="userpwagain" >*비밀번호 확인</label></td>
+                <td class="write"><input type="password" id="userpwagain"> (위 번호와 같이 입력해 주세요)</td>
+            </tr>
+            <tr class="first">
+                <td colspan="2"><b>☞개인정보</b></td>
+            </tr>
+            <tr>
+                <td class="desbox"><label for="name">*이름(한글)</label></td>
+                <td class="write"><input type="name" id="name"> (예: 박정현)</td>
+            </tr>
+            <tr>
+                <td class="desbox"><label for="date">생년월일</label></td>
+                <td><input type="date" id="date"><input type="radio" id="radio"></td>
+
+            </tr>
+            <tr>
+                <td class="desbox" rowspan="2"><label for="address">*주소</label></td>
+                <td><input type="text" id="address" > <button>우편번호 찾기</button></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="address2"></td>
+            </tr>
+            <tr>
+                <td class="desbox"><label for="phone">*전화번호</label></td>
+                <td ><label for="phone" id="cellphone">핸드폰</label> <input type="phone" id="phone">
+                <input type="radio" name="data" id="data">SKT
+                <input type="radio" name="data" id="data">KT
+                <input type="radio" name="data" id="data">LGT</td>
+                
+            </tr>
+            <tr>
+                <td class="desbox"><label for="email">이메일</label></td>
+                <td><input type="email" name="email" id="email"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="desbox"><label for="intro">가입인사</label></td>
+                <td><textarea id="intro"></textarea></td>
+            </tr>
+        </table>
+        <div class="button">
+            <input type="submit" class="button1" value="확인">
+            <input type="reset" class="button1" value="다시입력">
+        </div>
+    </form>
+</body>
+</html>

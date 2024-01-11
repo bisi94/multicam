@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>이미지</title>
+    </head>
+    <body>
+        <h1>이미지 태그</h1>
+        <!-- inline 요소 -->
+        <img src="b.png" alt="배경이미지입니다" width="330" height="500">
+
+        <!-- 상대경로방식 실행중인 html파일이 있는 경로를 기준으로 파일을 찾는 방식
+             . : 현재 디렉토리
+            .. : 현재 디렉토리 한 단계 위(상위 디렉토리)
+            ../../파일명 : 2 단계 위 상위 디렉토리에서 파일을 찾는다 -->
+        <hr color="red">
+        <img src="img/c.png" alt="배경이미지입니다"> 
+        <img src="img/f.png" alt="xboxkk">
+        <img src="img/m.png" alt="뜨냐">
+        <img src="/img/mt.png">
+        <img src="http://localhost:5500/img/m.png">
+        <img src="http://127.0.0.1:5500/img/m.png">
+        <!-- 절대경로 : 서버의 루트 디렉토리를 기준으로 파일을 찾는 방식 -->
+
+    </body>
+</html>

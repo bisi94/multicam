@@ -1,0 +1,19 @@
+/* out.css */
+body{
+    color:blueviolet;
+    font-size: 1.5em;
+    /* 1em: 16px
+       2em: 32px; */
+}
+/* 
+div선택해서
+서체: sans-serif
+글자색: 알아서
+바깥여백: 1em
+*/
+div{
+    font-family: sans-serif Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    margin: 1em;
+    background-color: skyblue;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 공통 스타일 */
+        ul>li {
+            list-style: none;
+            color: red;
+            float: left;
+            padding: 0.7em;
+            width: 100px;
+            height: 40px;
+            background-color: orange;
+            text-align: center;
+
+        }
+
+        li:first-child {
+            border-radius: 30px 0 0 30px;
+        }
+
+        li:last-child {
+            border-radius: 0 30px 30px 0;
+        }
+
+        li:nth-child(2n) {
+            background-color: pink;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        .write {
+            background-color: pink;
+            color: blue;
+        }
+
+        .detail {
+            color: blue;
+            background-color: white;
+        }
+
+        #shoes {
+            color: red;
+        }
+
+        tr {
+            text-align: center;
+        }
+
+        /* 페이지 레이아웃 */
+        .container {
+            
+            position: relative;
+            background-color: greenyellow;
+            width: 800px;
+            height: 100px;
+
+        }
+
+
+        .basket {
+
+            
+            position: absolute;
+            display: block;
+            width: 200px;
+            height: 80px;
+            background-color: black;
+            border-radius: 100px 10px;
+            margin-right: 150px;
+            top:-10px;
+            right: -200px;
+        }
+
+        .waveclass {
+            
+            width: 800px;
+            margin-top: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        .waveclass img {
+            width: 100%;
+        }
+
+        .table {
+            display: block;
+            width: 45%;
+            position: absolute;
+            top: 300px;
+            right: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <ul>
+            <li><a href="ex01.html">회원가입</a></li>
+            <li><a href="">제품정보</a></li>
+            <li><a href="">게시판</a></li>
+            <li><a href="">장바구니</a></li>
+        </ul>
+        <div class="basket">
+            <img src="img/bag.PNG">
+        </div>
+
+
+    </div>
+
+    <div class="waveclass">
+        <img src="img/waves.jpg" id="wave">
+        <div class="table">
+            <table>
+                <tr>
+                    <td class="write">제품번호</td>
+                    <td class="detail">100</td>
+                </tr>
+                <tr>
+                    <td class="write">제품이름</td>
+                    <td class="detail" id="shoes">shoes1</td>
+                </tr>
+                <tr>
+                    <td class="write">제품설명</td>
+                    <td class="detail">fun shoes1</td>
+                </tr>
+                <tr>
+                    <td class="write">제품가격</td>
+                    <td class="detail">1000</td>
+                </tr>
+                <tr>
+                    <td class="write">제조회사</td>
+                    <td class="detail">c100</td>
+                </tr>
+                <tr>
+                    <td class="write">제품이미지</td>
+                    <td class="detail"><img src="img/potato.PNG"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

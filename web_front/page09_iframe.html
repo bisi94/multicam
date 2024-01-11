@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+</head>
+<body>
+    <h1>iframe-internal frame (내부프레임)</h1>
+    <p>
+        웹문서의 일반 내용입니다
+    </p>
+    <iframe src="agreement.html" width="80%" height="400">
+    </iframe> <br>
+    <label>
+        <input type="checkbox" name="agree" id="agree">
+        이용약관에 동의합니다
+    </label>
+
+    <hr color="red">
+    <h2>동영상불러오기</h2>
+
+    <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/jOTfBlKSQYY" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+    gyroscope; picture-in-picture; web-share" 
+    allowfullscreen></iframe>
+
+    <br>
+    <hr color="red">
+
+    <h2>여러개 띄우기</h2>
+
+    <table>
+        <tr>
+            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/jOTfBlKSQYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/jOTfBlKSQYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/jOTfBlKSQYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
